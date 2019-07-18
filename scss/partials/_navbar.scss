@@ -1,0 +1,66 @@
+// Global Navbar
+.navbar,
+.sticky {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 0 auto;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    transition: 200ms ease-in, all, 200ms ease-out;
+
+    .links {
+        display: flex;
+        padding: 0;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+
+        li {
+            list-style-type: none;
+            position: relative;
+            
+            a {
+                margin: 0 1em;
+                color: $darkblue;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .logo {
+        h2 {
+            margin-right: 1em;
+        }
+    }
+}
+
+.secondary {
+    border-bottom: 2px solid $darkblue;
+    width: 80%;
+    padding: 0;
+}
+
+.sticky {
+    background: $lightgreyOP;
+    height: 10vh;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: fixed;
+    transition: 200ms ease-in, all, 200ms ease-out;
+
+    color: $ivory;
+    
+    .links > li > a  {
+        color: $ivory;
+    }
+}

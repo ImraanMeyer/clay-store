@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Website title -->
+    <title>SimplySahara | Home</title>
+
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Google fonts linked -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- Font awesome Kit Linked -->
+    <script src="https://kit.fontawesome.com/543cd5a67e.js"></script>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <header class="header">
+        <!-- Main navbar -->
+        <nav class="navbar">
+            <!-- Ul section -->
+            <ul class="links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./shop.html">Shop</a></li>
+            </ul>
+            <!-- Site logo -->
+            <div class="logo">
+                <h2>SimplySahara</h2>
+            </div>
+
+            <section class="burger">
+                <div class="line1 line"></div>
+                <div class="line2 line"></div>
+                <div class="line3 line"></div>
+            </section>
+        </nav>
+        <!-- nav end -->
+
+        <!-- Text inside hero -->
+        <div class="header-content">
+            <h1>Handcrafted Ceramic Goods</h1>
+            <p class="lead">One of a kind designs</p>
+        </div>
+
+        <!-- SVG for curved view -->
+        <img src="./images/wave-hero.svg" class="wave" alt="">
+        <img src="./images/wave-hero.svg" class="wave_animated" alt="">
+        <img src="./images/ball.svg" class="ball" alt="">
+        <img src="./images/ball.svg" class="ball_animated" alt="">
+
+
+        <!-- Scroll down arrow / button -->
+        <button class="btn">
+            <div class="arrow"></div>
+            <div class="arrow_2"></div>
+            <div class="arrow_3"></div>
+        </button>
+    </header>
+    <!-- Header end -->
+
+    <!-- Shop items appended through JS (index.js) -->
+    <section class="primary-content" id="scroll">
+        <h2>Top Sold Items</h2>
+        <!-- Items appearing dynamically -->
+        <div class="primary-items"></div>
+    </section>
+    <!-- Primary content end -->
+
+    <!-- first banner -->
+    <section class="banner">
+        <h2>Winter Sale</h2>
+        <p>Introducing our newest collection, perfect for your winter nights when you're tucked in bed eating soup</p>
+        <a href="shop.html" class="view">View</a>
+    </section>
+    <!-- Banner end -->
+
+    <!-- Customer testimonials pulled dynamically -->
+    <section class="testimonial">
+        <div class="row" id="testimonialRow"></div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <!-- flex container -->
+        <article class="footer-flex">
+            <!-- left section -->
+            <section class="footer-left-section">
+                <!-- logo  -->
+                <h1 class="footer-logo">SimplySahara</h1>
+                <!-- contact details -->
+                <ul class="footer-contact-details">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="contact.html#map">127 4th Ave, Rondebosch, CT 7700</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="contact.html">(+27) 78 372 2074</a>
+                    </li>
+                    <li>
+                        <i class="far fa-envelope"></i>
+                        <a href="mailto:contact@simplysahara.com">contact@simplysahara.com</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- footer right section -->
+            <section class="footer-right-section">
+                <article class="footer-links">
+                    <h4 class="right-title">LINKS</h4>
+
+                    <ul>
+                        <li><a href="shop.html">Products</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </article>
+
+                <article class="footer-shop">
+                    <a href="shop.html">
+                        <h4 class="right-title">SHOP</h4>
+                    </a>
+
+                    <ul>
+                        <li><a href="shop.html">Trending</a></li>
+                        <li><a href="shop.html">Catalog</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </article>
+            </section>
+        </article>
+    </footer>
+
+
+
+    <!-- Bootstrap JS scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

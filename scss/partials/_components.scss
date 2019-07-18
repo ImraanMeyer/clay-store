@@ -1,0 +1,383 @@
+// Global Buttons and Components
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.arrow,
+.arrow_2,
+.arrow_3 {
+	width: 6vmin;
+	height: 6vmin;
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 80%;
+	transform: rotate(135deg);
+
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		border-width: .8vmin .8vmin 0 0;
+		border-style: solid;
+		border-color: $ivory;
+		transition: .2s ease;
+		display: block;
+		transform-origin: 100% 0;
+	}
+}
+
+.arrow_2 {
+	animation: fade infinite 1s;
+}
+
+.arrow_3 {
+	animation: fade infinite 1s;
+	animation-delay: .5s;
+}
+
+// Item Buttons on home pages {
+.view {
+	display: grid;
+	place-content: center;
+}
+
+.add,
+.view {
+	height: 40px;
+	width: 140px;
+	background: $darkblue;
+	color: $ivory;
+	border-radius: .7em;
+	border: none;
+	outline: 0;
+
+	&:hover {
+		text-decoration: none;
+		background: $ivory;
+		color: $darkblue;
+		box-shadow: 0 0 0 6px $darkblueOP;
+		transition: .2s ease-in-out, box-shadow, .2s ease-in-out;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+// Item layout
+.item {
+	position: relative;
+	overflow: hidden;
+	width: auto;
+	transition: all .2s;
+	border-radius: 1.7em;
+	height: 40vh;
+
+	&:nth-of-type(1),
+	&:nth-of-type(4),
+	&:nth-of-type(5) {
+		grid-column: span 2;
+	}
+
+	&:hover .overlay {
+		opacity: 1;
+		// z-index: 2;
+		transition: all .2s;
+	}
+
+	&:hover .item-img {
+		transition: all .2s;
+		transform: scale(1.08);
+		filter: blur(3px);
+	}
+
+	.item-img {
+		display: block;
+		object-fit: cover;
+		object-position: bottom;
+	}
+
+	.item-img,
+	.overlay {
+		height: 100%;
+		width: 100%;
+	}
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+		background: $lgreyOP;
+
+		.text {
+			color: $ivory;
+			padding: 2%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+
+			p {
+				text-align: center;
+			}
+		}
+	}
+}
+
+// Alternate view for items 
+.margin {
+	margin-bottom: 60px;
+}
+
+// Testimonials 
+.testimonial {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.row {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	h4 {
+		font-style: italic;
+	}
+}
+
+.box {
+	position: relative;
+	border-radius: 2em;
+	height: fit-content;
+	background: linear-gradient(to left, $brown, $darkblue);
+	background-size: 200% 200%;
+	color: $ivory;
+	padding: 2%;
+
+	&:hover {
+		animation: change 5s infinite;
+		box-shadow: -20px 50px 100px $brownOP;
+		transition: all .2s;
+		transform: scale(1.06);
+	}
+
+	.content {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	h4 {
+		margin-left: auto;
+	}
+
+	.quote {
+		font-size: 50px;
+		position: relative;
+		left: 0;
+		display: block;
+		margin-right: auto;
+	}
+
+	.right {
+		text-align: right;
+	}
+}
+
+.col-md-4 {
+	margin: 30px 0 0 0;
+}
+
+.jump-link {
+	text-decoration: none !important;
+	color: inherit !important;
+	text-transform: uppercase;
+}
+
+#shop-btn {
+	border: none;
+	background: none;
+	color: inherit;
+	display: flex;
+	margin-left: 1em;
+}
+
+// CART UI
+.cart {
+	max-height: 70vh;
+	position: fixed;
+	padding: 2%;
+	right: 0;
+	top: 0;
+	background: $lgrey;
+	width: 50%;
+	transform: translateX(100%);
+	transition: transform 0.2s;
+	z-index: 999;
+	overflow-y: auto;
+}
+
+.cart-active {
+	transform: translateX(0%) !important;
+}
+
+button {
+	&:focus {
+		outline: 0 !important;
+	}
+}
+
+.radioBtns {
+	display: flex;
+	justify-content: space-evenly;
+	width: 50%;
+	align-items: center;
+	margin: 0 auto;
+
+	.form-control {
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	label {
+		margin-bottom: 0;
+		margin-left: 1rem;
+	}
+
+	input[type=radio]:checked~.check {
+		border: 5px solid $brown;
+	}
+
+	input[type=radio]:checked~.check::before {
+		background: $brown;
+	}
+
+	input[type=radio]:checked~label {
+		color: $brown;
+	}
+}
+
+.select-box {
+	width: 100% !important;
+	// display: none;
+}
+
+#delivery,
+#collection {
+	transition: .15s ease-in-out, display, .15s ease-in-out;
+}
+
+.signUP {
+	display: block;
+	margin: 10px auto;
+	color: $ivory;
+	border-radius: 1.7em;
+	width: 150px;
+	height: 40px;
+	background: $darkblue;
+	border: none;
+
+	&:hover {
+		background: $ivory;
+		color: $darkblue;
+		box-shadow: 0 0 0 6px $darkblueOP;
+		transition: 200ms ease-in-out, all, 200ms ease-in-out;
+	}
+}
+
+#codeDisplay {
+	width: fit-content;
+	display: none;
+	background-color: $lgrey;
+	color: $ivory;
+	text-align: center;
+	border-radius: 6px;
+	padding: .6em;
+	position: absolute;
+	z-index: 54;
+	left: 50%;
+	bottom: -60%;
+	transform: translate(-50%, -50%);
+}
+
+#codeDisplay::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: $lgrey transparent transparent transparent;
+}
+
+// Scroll bar settings
+body {
+	width: 100.8%;
+}
+
+.scroll {
+	width: -webkit-fill-available;
+	height: -webkit-fill-available;
+	overflow: auto;
+	float: left;
+	margin: 0 10px;
+}
+
+.content {
+	height: auto;
+}
+
+body::-webkit-scrollbar,
+.cart::-webkit-scrollbar {
+	width: 7px;
+}
+
+body::-webkit-scrollbar-thumb,
+.cart::-webkit-scrollbar-thumb {
+	background: $white;
+}
+
+body::-webkit-scrollbar-track,
+.cart::-webkit-scrollbar-track {
+	background: $lgrey;
+}
+
+// Mobile Nav Burger Menu Design
+.burger {
+	display: none;
+	cursor: pointer;
+	margin-right: 10%;
+
+	div {
+		width: 25px;
+		height: 2px;
+		background: black;
+		margin: 5px;
+		transition: all .2s ease;
+	}
+}
+
+.burger-active {
+	background: $ivory;
+}

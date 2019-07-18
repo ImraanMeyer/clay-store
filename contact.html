@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SimplySahara | Contact Us</title>
+
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Google fonts linked -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- Font awesome Kit Linked -->
+    <script src="https://kit.fontawesome.com/543cd5a67e.js"></script>
+</head>
+
+<body>
+    <header class="header min">
+        <nav class="navbar secondary">
+            <ul class="links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./shop.html">Shop</a></li>
+            </ul>
+            <div class="logo">
+                <h2>SimplySahara</h2>
+            </div>
+
+            <section class="burger">
+                <div class="line1 line"></div>
+                <div class="line2 line"></div>
+                <div class="line3 line"></div>
+            </section>
+        </nav>
+    </header>
+
+    <section class="contact-box-flex">
+        <!-- Left box section -->
+        <article class="contact-box box-left">
+            <i class="fas fa-map-marker-alt"></i>
+            <h4>Our Address</h4>
+            <p>127 4th Ave, Rondebosch, CT 7700</p>
+        </article>
+
+        <!-- Centered box -->
+        <article class="contact-box box-center">
+            <!-- Centered top -->
+            <section class="center-top">
+                <div class="top-box-content">
+                    <i class="fas fa-phone"></i>
+                    <p id="extra-pad">(+27) 78 372 2074</p>
+                </div>
+            </section>
+
+            <!-- Centered bottom -->
+            <section class="center-bottom">
+                <div class="bottom-box-content">
+                    <i class="far fa-envelope"></i>
+                    <p id="extra-pad">contact@simplysahara.com</p>
+                </div>
+            </section>
+        </article>
+        <!-- Right section -->
+        <article class="contact-box box-right">
+            <i class="far fa-clock"></i>
+            <h4>Opening Hour</h4>
+            <p>Mon-Fri 09:00 - 17:00</p>
+        </article>
+    </section>
+
+
+    <section class="contact-form">
+        <form class="form-flex">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" id="form-name">
+                <input type="text" name="email" placeholder="Your Email" id="form-email">
+            </div>
+            <div class="form-group">
+                <input type="text" name="number" placeholder="Phone Number" id="form-number">
+                <input type="text" name="subject" placeholder="Subject" id="form-subject">
+            </div>
+
+            <textarea name="text" id="form-text" placeholder="Your Messages" id="form-text"></textarea>
+
+            <a href="#" id="form-button">
+                send email
+            </a>
+        </form>
+    </section>
+    <iframe class="map" id="map" width="100%" height="500"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.573875804719!2d18.496554214828937!3d-33.97779053215443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc4337d7cc17c3%3A0xd3fd0fffec7d255f!2s127+4th+Ave%2C+Rondebosch+East%2C+Cape+Town%2C+7780!5e0!3m2!1sen!2sza!4v1562149612254!5m2!1sen!2sza"
+        frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <!-- flex container -->
+        <article class="footer-flex">
+            <!-- left section -->
+            <section class="footer-left-section">
+                <!-- LOGO  -->
+                <h1 class="footer-logo">SimplySahara</h1>
+                <!-- contact details -->
+                <ul class="footer-contact-details">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="contact.html#map">127 4th Ave, Rondebosch, CT 7700</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="contact.html">(+27) 78 372 2074</a>
+                    </li>
+                    <li>
+                        <i class="far fa-envelope"></i>
+                        <a href="mailto:contact@simplysahara.com">contact@simplysahara.com</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- footer right section -->
+            <section class="footer-right-section">
+                <article class="footer-links">
+                    <h4 class="right-title">LINKS</h4>
+
+                    <ul>
+                        <li><a href="shop.html">Products</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </article>
+
+                <article class="footer-shop">
+                    <a href="shop.html">
+                        <h4 class="right-title">SHOP</h4>
+                    </a>
+
+                    <ul>
+                        <li><a href="shop.html">Trending</a></li>
+                        <li><a href="shop.html">Catalog</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </article>
+            </section>
+        </article>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+    </script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

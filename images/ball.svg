@@ -1,0 +1,23 @@
+<svg version="1.1" class="ball" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1024 768"
+    style="enable-background:new 0 0 1024 768;" xml:space="preserve">
+    <style type="text/css">
+        .st1 {
+            fill: url(#XMLID_4_);
+        }
+    </style>
+    <linearGradient id="XMLID_4_" gradientUnits="userSpaceOnUse" x1="115.0538" y1="490.659" x2="434.0854"
+        y2="490.659">
+        <stop offset="0" style="stop-color:#B99767" />
+        <stop offset="6.405089e-002" style="stop-color:#B0946B" />
+        <stop offset="0.1706" style="stop-color:#A89170" />
+        <stop offset="0.3066" style="stop-color:#9F8E74" />
+        <stop offset="0.4649" style="stop-color:#978B79 " />
+        <stop offset="0.5674" style="stop-color:#8E887D" />
+        <stop offset="0.8652" style="stop-color:#868582" />
+        <stop offset="0.9944" style="stop-color:#7E8287" />
+    </linearGradient>
+    <path id="XMLID_1_" class="st1" d="M171.6,385.6c-34.2,27.9-65.9,80.8-54,136.5c16.2,75.7,104.8,118.7,178.5,106.5
+c85.5-14.2,120.9-97.7,124.5-106.5c7.5-18.5,22.6-55.9,6-76.5c-23-28.6-82.7,5-115.5-28.5c-20.4-20.8-7.2-43.8-27-58.5
+C256.9,338.4,202.8,360.1,171.6,385.6z" />
+</svg>

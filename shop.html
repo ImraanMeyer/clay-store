@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SimplySahara | Shop</title>
+
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Google fonts linked -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- Font awesome Kit Linked -->
+    <script src="https://kit.fontawesome.com/543cd5a67e.js"></script>
+</head>
+
+<body>
+    <!-- Cart view / display (hidden) -->
+    <section class="cart" id="cart">
+        <h2>Your Cart</h2>
+        <button class="close" onclick="closeCart();">&times; </button>
+
+        <section class="header-for-titles">
+            <h5>Name</h5>
+            <h5>Quantity</h5>
+            <h5>Price</h5>
+        </section>
+        <section class="items-listed">
+            <p>Your cart is empty</p>
+        </section>
+
+        <h5 id="right" class="total-text">Total: R<span class="total"></span></h5>
+        <h5 id="right">Discounted Total: R<span class="coupon"></span></h5>
+
+        <button id="clear">Clear Cart</button>
+    </section>
+    <!-- Cart end -->
+
+    <!-- header -->
+    <header class="header min">
+        <!-- navbar -->
+        <nav class="navbar secondary">
+            <ul class="links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./shop.html">Shop</a></li>
+                <li><button id="shop-btn" onclick="openCart()" ondblclick="closeCart()"><i
+                            class="fas fa-shopping-cart"></i></button>
+                    <div class="total-counted"></div>
+                </li>
+            </ul>
+            <div class="logo">
+                <h2>SimplySahara</h2>
+            </div>
+
+            <section class="burger">
+                <div class="line1 line"></div>
+                <div class="line2 line"></div>
+                <div class="line3 line"></div>
+            </section>
+        </nav>
+        <!-- navbar end -->
+    </header>
+    <!-- header end -->
+
+    <!-- Items pulled dynamically -->
+    <div class="container">
+        <div class="row" id="shop-row"></div>
+    </div>
+
+    <section class="form" onclick="closeCart()">
+        <h5>Register for coupon code!</h5>
+        <!-- Name input field -->
+        <div class="form-group">
+            <input type="text" id="name" class="form-control" placeholder="Your Name">
+        </div>
+        <!-- Email input field -->
+        <div class="form-group">
+            <input type="email" class="form-control" placeholder="Your Email" id="email">
+        </div>
+        <!-- Address input field -->
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Your Address" id="address">
+        </div>
+        <!-- Radio buttons -->
+        <div class="form-group radioBtns">
+            <div class="form-control">
+                <input type="radio" name="preference" value="delivery" id="delivery">
+                <label for="delivery">Delivery</label>
+            </div>
+            <div class="form-control">
+                <input type="radio" name="preference" value="collection" id="collection">
+                <label for="collection">Collection</label>
+            </div>
+        </div>
+        <!-- Different delivery options (hidden) -->
+        <select name="deliveryOptions" id="deliverySelect" class="form-control select-box">
+            <option value="0" selected disabled>--Please select a delivery service--</option>
+            <option value="fastway">Fast Way</option>
+            <option value="fedex"> FedEx</option>
+            <option value="courierit">Courier It</option>
+            <option value="postoffice">Post Office</option>
+        </select>
+
+        <!-- Adds and alerts user with a coupon code -->
+        <button onclick="registerUser()" class="signUP">SIGN UP</button>
+
+        <!-- Coupon code output -->
+        <p id="codeDisplay"> </p>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer" onclick="closeCart()">
+        <!-- flex container -->
+        <article class="footer-flex">
+            <!-- left section -->
+            <section class="footer-left-section">
+                <!-- LOGO  -->
+                <h1 class="footer-logo">SimplySahara</h1>
+                <!-- contact details -->
+                <ul class="footer-contact-details">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="contact.html#map">127 4th Ave, Rondebosch, CT 7700</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="contact.html">(+27) 78 372 2074</a>
+                    </li>
+                    <li>
+                        <i class="far fa-envelope"></i>
+                        <a href="mailto:contact@simplysahara.com">contact@simplysahara.com</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- footer right section -->
+            <section class="footer-right-section">
+                <article class="footer-links">
+                    <h4 class="right-title">LINKS</h4>
+
+                    <ul>
+                        <li><a href="shop.html">Products</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </article>
+
+                <article class="footer-shop">
+                    <a href="shop.html">
+                        <h4 class="right-title">SHOP</h4>
+                    </a>
+
+                    <ul>
+                        <li><a href="shop.html">Trending</a></li>
+                        <li><a href="shop.html">Catalog</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </article>
+            </section>
+        </article>
+    </footer>
+
+    <!-- Jquery link -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+    </script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
